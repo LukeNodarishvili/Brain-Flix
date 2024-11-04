@@ -1,0 +1,34 @@
+@use "../../../styles/partials/_breakpoints.scss" as *;
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  @include computerscreen {
+    margin: 0rem 0rem 0rem 8rem;
+  }
+}
+.title {
+  border-bottom: 1px solid #e1e1e1;
+}
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  &__coloum {
+    @include tabletANDcomputerscreen {
+      display: flex;
+      gap: 3rem;
+    }
+    @include computerscreen {
+      margin-right: 1rem;
+    }
+  }
+  &__element {
+    display: flex;
+    gap: 0.1rem;
+    color: #afafaf;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

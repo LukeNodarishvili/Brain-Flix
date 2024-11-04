@@ -1,0 +1,69 @@
+@use "../../../../styles/partials/_breakpoints.scss" as *;
+
+.NewComment {
+  padding: 0 0rem 1rem 0;
+  border-bottom: 1px solid #e1e1e1;
+  @include computerscreen {
+    padding: 0 1rem 1rem 0;
+  }
+  &__NumberOfComments {
+    font-weight: 700;
+  }
+}
+.imageform {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  &__image {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+}
+.form {
+  gap: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  &__left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &--label {
+      color: #afafaf;
+      font-weight: 700;
+    }
+    &--input {
+      color: black;
+      border-radius: 5px;
+      border-color: #e1e1e1;
+      background-color: #fafafa;
+      border-style: solid;
+      padding: 1rem 0 0 1rem;
+      text-align: left;
+      vertical-align: top;
+      @include phonescreen {
+        height: 120px;
+      }
+      @include tabletANDcomputerscreen {
+        height: 42px;
+      }
+    }
+  }
+  &__right {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: #0095ff;
+    border-radius: 5px;
+    border-style: none;
+    color: white;
+    height: 3rem;
+    @include tabletANDcomputerscreen {
+      margin-top: 20px;
+      width: 50%;
+    }
+  }
+  @include tabletANDcomputerscreen {
+    display: flex;
+  }
+}
